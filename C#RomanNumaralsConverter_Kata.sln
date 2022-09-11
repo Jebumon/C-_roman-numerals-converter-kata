@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumaralsConverter", "RomanNumaralsConverter\RomanNumaralsConverter.csproj", "{C23B3542-ACC8-47E6-B76D-DDA1AF462172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumaralsConverter.Tests", "RomanNumaralsConverter.Tests\RomanNumaralsConverter.Tests.csproj", "{5E31AB20-8B07-44CC-BFE5-D9BC9A12D603}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C23B3542-ACC8-47E6-B76D-DDA1AF462172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23B3542-ACC8-47E6-B76D-DDA1AF462172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23B3542-ACC8-47E6-B76D-DDA1AF462172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23B3542-ACC8-47E6-B76D-DDA1AF462172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E31AB20-8B07-44CC-BFE5-D9BC9A12D603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E31AB20-8B07-44CC-BFE5-D9BC9A12D603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E31AB20-8B07-44CC-BFE5-D9BC9A12D603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E31AB20-8B07-44CC-BFE5-D9BC9A12D603}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
