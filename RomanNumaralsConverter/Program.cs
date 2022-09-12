@@ -2,5 +2,9 @@
 using RomanNumaralsConverter.Models;
 Console.WriteLine("Hello, World!");
 NoramalNumberToRomanNumber noramalNumberToRoman = new();
-noramalNumberToRoman.ConverNumber(930);
-Console.WriteLine(noramalNumberToRoman.ConverNumber(2330));
+Console.WriteLine("Please enter a number");
+var  a = Console.ReadLine();
+int number = Convert.ToInt32(a);
+string romanNumber = noramalNumberToRoman.ConverNumber(number);
+
+Console.WriteLine("You Converted " +"'"+number+"'" + " to Roman Number "+ "'"+ romanNumber+ "'");
