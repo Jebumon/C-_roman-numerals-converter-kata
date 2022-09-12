@@ -35,4 +35,18 @@ public class NoramalNumberToRomanNumberTests
     {
         NoramalNumberToRomanNumber.ConverNumber(3000).Should().Be("MMM");
     }
+
+    [Test]
+    public void Convert_number_0_should_return_ArgumentException()
+    {
+        var ex = Assert.Throws<ArgumentException>(() => NoramalNumberToRomanNumber.ConverNumber(0));
+        Assert.That(ex.Message, Is.EqualTo("Please ente a number between 1 to 3000"));
+    }
+
+    [Test]
+    public void Convert_number_3001_should_return_ArgumentException()
+    {
+        var ex = Assert.Throws<ArgumentException>(() => NoramalNumberToRomanNumber.ConverNumber(3001));
+        Assert.That(ex.Message, Is.EqualTo("Please ente a number between 1 to 3000"));
+    }
 }

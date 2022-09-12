@@ -10,6 +10,7 @@ namespace RomanNumaralsConverter.Models
     public class NoramalNumberToRomanNumber
     {
         public int NoramalNumber;
+        string romanNumber = "";
 
         public Dictionary<string, int> RomanNumeralSymbols = new Dictionary<string, int>
         {
@@ -35,29 +36,33 @@ namespace RomanNumaralsConverter.Models
         }
         public string ConverNumber(int inputNormalNumber) 
         {
-            NoramalNumber = inputNormalNumber;
-            string romanNumber = "";
-            foreach (var(key, value) in RomanNumeralSymbols) 
+            if (inputNormalNumber > 0 && inputNormalNumber <= 3000)
             {
-                string romanDigit = key;
-                int romanDigitValue = value;
-                int placeMultiplier = NoramalNumber / romanDigitValue;
-                if(placeMultiplier >= 1) 
+                NoramalNumber = inputNormalNumber;
+                foreach (var (key, value) in RomanNumeralSymbols)
                 {
-                    NoramalNumber = NoramalNumber % romanDigitValue;
-                    OutputDictionary.Add(romanDigit, placeMultiplier);
+                    string romanDigit = key;
+                    int romanDigitValue = value;
+                    int placeMultiplier = NoramalNumber / romanDigitValue;
+                    if (placeMultiplier >= 1)
+                    {
+                        NoramalNumber = NoramalNumber % romanDigitValue;
+                        OutputDictionary.Add(romanDigit, placeMultiplier);
+                    }
                 }
-            }
-            foreach (var (key, value) in OutputDictionary)
-            {
-                int placeMultiplier = value;
-                string romanDigit = key;
-                for(int i = 0; i < value; i++) 
+                foreach (var (key, value) in OutputDictionary)
                 {
-                    romanNumber += key;
+                    int placeMultiplier = value;
+                    string romanDigit = key;
+                    for (int i = 0; i < value; i++)
+                    {
+                        romanNumber += key;
+                    }
                 }
+                return romanNumber;
             }
-            return romanNumber;
+            throw new ArgumentException(message: "Please ente a number between 1 to 3000");
+            
 
         }
     }
